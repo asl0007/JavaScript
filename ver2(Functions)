@@ -82,3 +82,72 @@ todos
 (anonymous) @ VM595:1
 21:10:41.651 toAddTodo('PPPP')
 21:10:41.651 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "new Element", "new Element", "new Element", "new Element", undefined, "PPPP"]
+
+??//Function to change todo
+
+21:18:22.309 function changeTodo() {
+  todos[4] = "Hello";
+}
+21:18:22.313 undefined
+21:18:42.097 changeTodo()
+21:18:42.100 undefined
+21:18:55.311 displayTodos()
+21:18:55.311 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "new Element", "new Element", undefined, "PPPP"]
+21:18:55.318 undefined
+21:19:43.619 changeTodo()
+21:19:43.623 undefined
+21:19:45.567 changeTodo()
+21:19:45.572 undefined
+21:19:50.721 displayTodos()
+21:19:50.722 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "new Element", "new Element", undefined, "PPPP"]
+21:19:50.733 undefined
+21:22:31.129 function changeTodo(position,newValue) {
+  todos[position] = newValue;
+}
+21:22:31.133 undefined
+21:22:48.514 displayTodos(9,Mix)
+21:22:48.518 VM729:1 Uncaught ReferenceError: Mix is not defined
+    at <anonymous>:1:16
+(anonymous) @ VM729:1
+21:23:00.544 displayTodos(9,'Mix')
+21:23:00.543 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "new Element", "new Element", undefined, "PPPP"]0: "list1"1: "list2"2: "list3"3: "new Element"4: "Hello"5: "new Element"6: "new Element"7: "new Element"8: undefined9: "PPPP"length: 10__proto__: Array(0)
+21:23:00.550 undefined
+21:24:18.934 changeTodo(9,'mix')
+21:24:18.937 undefined
+21:24:26.173 displayTodos()
+21:24:26.173 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "new Element", "new Element", undefined, "mix"]
+21:24:26.187 undefined
+21:24:56.369 changeTodo(8,'Remix')
+21:24:56.374 undefined
+21:25:00.202 displayTodos()
+21:25:00.202 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "new Element", "new Element", "Remix", "mix"]
+21:25:00.212 undefined
+21:26:41.325 todos
+21:26:41.335 (10) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "new Element", "new Element", "Remix", "mix"]
+21:28:52.274 like = displayTodos()
+21:28:52.275 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "new Element", "new Element", "Remix", "mix"]
+21:28:52.281 undefined
+21:29:25.378 function changeTodo(position,newValue) {
+  todos[position] = newValue;
+  like;
+}
+21:29:25.384 undefined
+21:29:33.924 changeTodo()
+21:29:33.929 undefined
+21:30:13.268 changeTodo(6,'changged')
+21:30:13.272 undefined
+21:30:19.295 like
+21:30:19.298 undefined
+21:30:43.644 displayTodos()
+21:30:43.644 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "changged", "new Element", "Remix", "mix", undefined: undefined]
+21:30:43.655 undefined
+21:33:09.200 function changeTodo(position,newValue) {
+  todos[position] = newValue;
+  displayTodos();
+}
+21:33:09.207 undefined
+21:33:28.045 changeTodo(6,'changed')
+21:33:28.045 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "changed", "new Element", "Remix", "mix", undefined: undefined]
+21:33:28.051 undefined
+21:33:42.358 changeTodo(10,'changed')
+21:33:42.358 VM363:2 My Todos:  (11) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "changed", "new Element", "Remix", "mix", "changed", undefined: undefined]
