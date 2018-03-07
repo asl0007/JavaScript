@@ -151,3 +151,35 @@ todos
 21:33:28.051 undefined
 21:33:42.358 changeTodo(10,'changed')
 21:33:42.358 VM363:2 My Todos:  (11) ["list1", "list2", "list3", "new Element", "Hello", "new Element", "changed", "new Element", "Remix", "mix", "changed", undefined: undefined]
+
+??//Delete function
+
+22:10:10.604 function deleteTodo(position){
+  todos.splice(position,1);
+  displayTodos();
+}
+22:10:10.609 undefined
+22:10:58.843 deleteTodo()
+22:10:58.844 VM363:2 My Todos:  (10) ["list2", "list3", "new Element", "Hello", "new Element", "changed", "new Element", "Remix", "mix", "changed", undefined: undefined]
+22:10:58.852 undefined
+22:11:13.593 todos
+22:11:13.597 (10) ["list2", "list3", "new Element", "Hello", "new Element", "changed", "new Element", "Remix", "mix", "changed", undefined: undefined]
+22:11:19.306 deleteTodo()
+22:11:19.307 VM363:2 My Todos:  (9) ["list3", "new Element", "Hello", "new Element", "changed", "new Element", "Remix", "mix", "changed", undefined: undefined]
+22:11:19.312 undefined
+22:11:44.334 deleteTodo(9)
+22:11:44.335 VM363:2 My Todos:  (9) ["list3", "new Element", "Hello", "new Element", "changed", "new Element", "Remix", "mix", "changed", undefined: undefined]
+22:11:44.348 undefined
+22:11:58.052 deleteTodo(10)
+22:11:58.053 VM363:2 My Todos:  (9) ["list3", "new Element", "Hello", "new Element", "changed", "new Element", "Remix", "mix", "changed", undefined: undefined]
+22:11:58.060 undefined
+22:12:14.939 deleteTodo(8)
+22:12:14.940 VM363:2 My Todos:  (8) ["list3", "new Element", "Hello", "new Element", "changed", "new Element", "Remix", "mix", undefined: undefined]
+22:12:14.945 undefined
+22:14:37.057 function deleteTodo(position,elements){
+  todos.splice(position,elements);
+  displayTodos();
+}
+22:14:37.063 undefined
+22:15:01.553 deleteTodo(1,3)
+22:15:01.582 VM363:2 My Todos:  (5) ["list3", "changed", "new Element", "Remix", "mix", undefined: undefined]
