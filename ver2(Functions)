@@ -1,0 +1,84 @@
+function Add(x,y){
+    var z;
+    z= x+y;
+    console.log(z);
+}
+20:40:11.267 undefined
+20:40:25.352 Add(2,3)
+20:40:25.351 VM306:4 5
+20:40:25.363 undefined
+
+??//Functo to display todo
+
+20:46:34.412 var todos = ['list1', 'list2', 'list3']
+
+20:46:34.417 undefined
+20:50:43.999 function displayTodos(){
+  console.log("My Todos: ",todos);
+}
+20:50:44.003 undefined
+20:50:53.418 displayTodos
+20:50:53.420 ƒ displayTodos(){
+  console.log("My Todos: ",todos);
+}
+20:51:32.312 function displayTodos(){
+  console.log('My Todos: ',todos);
+}
+20:51:32.317 undefined
+20:51:42.599 displayTodos()
+20:51:42.600 VM363:2 My Todos:  (3) ["list1", "list2", "list3"]
+20:51:42.647 undefined
+
+??//Function to add todo
+
+todos
+20:58:46.816 (3) ["list1", "list2", "list3"]
+20:59:24.479 function toAddTodo(){
+}
+20:59:24.482 undefined
+21:00:16.561 function toAddTodo(){
+  todos.push('new Element');
+}
+21:00:16.565 undefined
+21:00:22.899 toAddTodo
+21:00:22.902 ƒ toAddTodo(){
+  todos.push('new Element');
+}
+21:00:30.383 toAddTodo()
+21:00:30.388 undefined
+21:01:26.172 todos
+21:01:26.176 (4) ["list1", "list2", "list3", "new Element"]
+21:02:28.806 toAddTodo()
+21:02:28.811 undefined
+21:02:34.564 toAddTodo()
+21:02:34.568 undefined
+21:02:41.316 displayTodos()
+21:02:41.316 VM363:2 My Todos:  (6) ["list1", "list2", "list3", "new Element", "new Element", "new Element"]
+21:02:41.323 undefined
+21:03:34.325 //
+21:03:34.329 undefined
+21:07:14.656 function toAddTodo(){
+  todos.push('new Element');
+  displayTodos();
+}
+21:07:14.662 undefined
+21:07:25.607 toAddTodo()
+21:07:25.608 VM363:2 My Todos:  (7) ["list1", "list2", "list3", "new Element", "new Element", "new Element", "new Element"]
+21:07:25.614 undefined
+21:07:43.851 toAddTodo()
+21:07:43.852 VM363:2 My Todos:  (8) ["list1", "list2", "list3", "new Element", "new Element", "new Element", "new Element", "new Element"]
+21:07:43.858 undefined
+21:10:05.267 function toAddTodo(todo){
+  todos.push(todo);
+  displayTodos();
+}
+21:10:05.270 undefined
+21:10:09.593 toAddTodo()
+21:10:09.591 VM363:2 My Todos:  (9) ["list1", "list2", "list3", "new Element", "new Element", "new Element", "new Element", "new Element", undefined]
+21:10:09.599 undefined
+21:10:27.229 toAddTodo(PPPP)
+21:10:27.231 VM595:1 Uncaught ReferenceError: PPPP is not defined
+    at <anonymous>:1:11
+(anonymous) @ VM595:1
+21:10:41.651 toAddTodo('PPPP')
+21:10:41.651 VM363:2 My Todos:  (10) ["list1", "list2", "list3", "new Element", "new Element", "new Element", "new Element", "new Element", undefined, "PPPP"]
