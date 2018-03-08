@@ -76,10 +76,21 @@ var laptop = {
 20:02:10.304 var myInfo = {
   Name: 'Shiraz Ali',
   description: function description() {
-    console.log(this.name);
+    console.log(this.Name);
   }
 }
 20:02:10.311 undefined
 20:02:26.159 myInfo.description();
 20:02:26.158 VM596:4 undefined
 20:02:26.169 undefined
+
+var myInfo = {
+  Name: 'Shiraz Ali',
+  description: function description() {
+    console.log(this.Name);
+  }
+}
+20:29:06.488 undefined
+20:29:09.436 myInfo.description();
+20:29:09.435 VM98:4 Shiraz Ali
+20:29:09.446 undefined
