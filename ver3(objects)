@@ -1,0 +1,18 @@
+var todolist = {
+  todos: ['list1', 'list2', 'list3'],
+  displayTodos: function() {
+    console.log("My todos: ", this.todos);
+  },
+  toAddTodo: function(todo) {
+    this.todos.push(todo);
+    this.displayTodos();
+  },
+  changeTodo: function(position,val) {
+    this.todos[position] = val;
+    this.displayTodos();
+  },
+  deleteTodo: function() {
+    this.todos.splice(3,1);
+    this.displayTodos();
+  }
+};
