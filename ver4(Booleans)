@@ -1,0 +1,140 @@
+//todolist.toAddtodo should add objects
+
+var todolist = {
+  todos: ['list1', 'list2', 'list3'],
+  displayTodos: function() {
+    console.log("My todos: ", this.todos);
+  },
+  toAddTodo: function(todoText) {
+    this.todos.push({
+      todoText : todoText,
+      completed: false
+    });
+    this.displayTodos();
+  },
+  changeTodo: function(position,val) {
+    this.todos[position] = val;
+    this.displayTodos();
+  }
+};
+
+todolist.toAddTodo('first try');
+script.js:4 My todos:  
+(4) ["list1", "list2", "list3", {…}]
+undefined
+
+
+//todoList.changeTodo should change the todoText property
+
+var todolist = {
+  todos: ['list1', 'list2', 'list3'],
+  displayTodos: function() {
+    console.log("My todos: ", this.todos);
+  },
+  toAddTodo: function(todoText) {
+    this.todos.push({
+      todoText : todoText,
+      completed: false
+    });
+    this.displayTodos();
+  },
+  changeTodo: function(position,todoText) {
+    this.todos[position].todoText = todoText;
+    this.displayTodos();
+  }
+};
+
+todolist.toAddTodo('first try');
+script.js:4 My todos:  
+(4) ["list1", "list2", "list3", {…}]
+undefined
+todolist.changeTodo(3,'Second try');
+script.js:4 My todos:  
+(4) ["list1", "list2", "list3", {…}]
+0
+:
+"list1"
+1
+:
+"list2"
+2
+:
+"list3"
+3
+:
+{todoText: "Second try", completed: false}
+length
+:
+4
+__proto__
+:
+Array(0)
+
+//todoList.toggleCompleted should flip the completed property
+
+22:54:20.708 !true
+22:54:20.714 false
+22:54:24.928 !false
+22:54:24.931 true
+22:54:41.405 var Hello = True;
+22:54:41.412 VM563:1 Uncaught ReferenceError: True is not defined
+    at <anonymous>:1:13
+(anonymous) @ VM563:1
+22:54:49.303 var Hello = true;
+22:54:49.307 undefined
+22:55:09.216 Hello = !Hello;
+22:55:09.221 false
+22:55:22.770 !Hello
+22:55:22.775 true
+22:55:40.901 !Hello
+22:55:40.905 true
+
+var todolist = {
+  todos: [],
+  displayTodos: function() {
+    console.log("My todos: ", this.todos);
+  },
+  toAddTodo: function(todoText) {
+    this.todos.push({
+      todoText : todoText,
+      completed: false
+    });
+    this.displayTodos();
+  },
+  changeTodo: function(position,todoText) {
+    this.todos[position].todoText = todoText;
+    this.displayTodos();
+  },
+  toggleCompleted: function(position) {
+    var todo = this.todos[position];
+    todo.completed = !todo.completed;
+    this.displayTodos();
+  }
+  
+};
+
+todolist.toAddTodo('Boolean testing');
+script.js:4 My todos:  
+[{…}]
+0
+:
+{todoText: "Boolean testing", completed: false}
+length
+:
+1
+__proto__
+:
+Array(0)
+undefined
+todolist.toggleCompleted(0);
+script.js:4 My todos:  
+[{…}]
+0
+:
+{todoText: "Boolean testing", completed: true}
+length
+:
+1
+__proto__
+:
+Array(0)
